@@ -54,7 +54,7 @@ The pipelined implementation consists of five classic stages:
 
 ### Prerequisites
 - Icarus Verilog or other Verilog simulator
-- GTKWave (optional, for waveform viewing)
+- GTKWave (for waveform viewing)
 
 
 ## Performance Analysis
