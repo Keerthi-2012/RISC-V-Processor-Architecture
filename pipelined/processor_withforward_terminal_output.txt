@@ -1,0 +1,1422 @@
+---------- Clock Cycle ----------
+Reset: 1
+Current PC: 0000000000000000
+Instruction: 00000000
+
+Fetch Stage Outputs:
+  opcode: 0000000, rd:  x, rs1:  0, rs2:  x
+  funct3: xxx, funct7: xxxxxxx
+  imm: xxxxxxxxxxxxxxxx
+  Valid Instruction: 0, Memory Error: 0
+
+Pipeline Register IF/ID Outputs:
+  opcode_out: xxxxxxx, rd_out:  x, rs1_out:  x, rs2_out:  x
+  funct3_out: xxx, funct7_out: xxxxxxx
+  imm_out: xxxxxxxxxxxxxxxx
+  PC_out: 0000000000000000
+
+Instruction Decoder Outputs:
+  Control Signals:
+    ALU_src: 0, Mem_to_Reg: 0, Reg_Write: 0
+    Mem_Read: 0, Mem_Write: 0, Branch_en: 0
+  Register Values:
+    ValA: xxxxxxxxxxxxxxxx, ValB: xxxxxxxxxxxxxxxx
+  Instruction Fields Passed to ID/EX:
+    opcode_out_cd: xxxxxxx
+    rs1_out_cd:  x, rs2_out_cd:  x, rd_out_cd:  x
+    funct3_out_cd: xxx, funct7_out_cd: xxxxxxx
+    imm_out_cd: xxxxxxxxxxxxxxxx
+
+ID/EX Pipeline Register Outputs:
+  Control Signals:
+    ALU_src_out: x, Mem_to_Reg_out: x, Reg_Write_out: x
+    Mem_Read_out: x, Mem_Write_out: x, Branch_en_out: x
+  Register Values and Forwarding:
+    ValA_idex: xxxxxxxxxxxxxxxx, ValB_idex: xxxxxxxxxxxxxxxx
+    forwardA: xx, forwardB: xx
+    ValA_forwarded: xxxxxxxxxxxxxxxx, ValB_forwarded: xxxxxxxxxxxxxxxx
+  Instruction Fields:
+    opcode_out_idex: xxxxxxx
+    rs1_out_idex:  x, rs2_out_idex:  x, rd_out_idex:  x
+    funct3_out_idex: xxx, funct7_out_idex: xxxxxxx
+    imm_out_idex: xxxxxxxxxxxxxxxx
+  Program Counter:
+    PC_out_idex: xxxxxxxxxxxxxxxx
+    Branch target: xxxxxxxxxxxxxxxx
+
+Execute Stage Outputs:
+  result: xxxxxxxxxxxxxxxx
+  Carry: x, Overflow: x, Zero Flag: x
+  Instruction Fields Passed to EX/MEM:
+    opcode_out_ex: xxxxxxx
+    rs1_out_ex:  x, rs2_out_ex:  x, rd_out_ex:  x
+    funct3_out_ex: xxx, funct7_out_ex: xxxxxxx
+
+EX/MEM Pipeline Register Outputs:
+  Control Signals:
+    Mem_to_Reg_out: x, Reg_Write_out: x, Mem_Read_out: x
+    Mem_Write_out: x, Branch_en_out: x
+  Register Values:
+    ValB_exmem: xxxxxxxxxxxxxxxx
+  Result: xxxxxxxxxxxxxxxx
+  Zero Flag: x
+  Branch Signals:
+    branch_taken: 0
+    branch_target: 0000000000000000
+
+Memory Stage Outputs:
+  Control Signals:
+    Mem_Read: x, Mem_Write: x, Mem_to_Reg: x
+  Memory Address: xxxxxxxxxxxxxxxx
+  Write Data (ValB): xxxxxxxxxxxxxxxx
+  Read Data: xxxxxxxxxxxxxxxx
+  Destination Register (rd):  x
+
+MEM/WB Pipeline Register Outputs:
+  Control Signals:
+    Reg_Write_out: x, Mem_to_Reg_out: x
+  Memory Data: xxxxxxxxxxxxxxxx
+  ALU Result: xxxxxxxxxxxxxxxx
+  Destination Register (rd):  x
+  Write Data (final): xxxxxxxxxxxxxxxx
+----------------------------------------
+
+---------- Clock Cycle ----------
+Reset: 0
+Current PC: 0000000000000000
+Instruction: 00208233
+
+Fetch Stage Outputs:
+  opcode: 0110011, rd:  4, rs1:  1, rs2:  2
+  funct3: 000, funct7: 0000000
+  imm: 0000000000000000
+  Valid Instruction: 1, Memory Error: 0
+
+Pipeline Register IF/ID Outputs:
+  opcode_out: xxxxxxx, rd_out:  x, rs1_out:  x, rs2_out:  x
+  funct3_out: xxx, funct7_out: xxxxxxx
+  imm_out: xxxxxxxxxxxxxxxx
+  PC_out: 0000000000000000
+
+Instruction Decoder Outputs:
+  Control Signals:
+    ALU_src: 0, Mem_to_Reg: 0, Reg_Write: 0
+    Mem_Read: 0, Mem_Write: 0, Branch_en: 0
+  Register Values:
+    ValA: xxxxxxxxxxxxxxxx, ValB: xxxxxxxxxxxxxxxx
+  Instruction Fields Passed to ID/EX:
+    opcode_out_cd: xxxxxxx
+    rs1_out_cd:  x, rs2_out_cd:  x, rd_out_cd:  x
+    funct3_out_cd: xxx, funct7_out_cd: xxxxxxx
+    imm_out_cd: xxxxxxxxxxxxxxxx
+
+ID/EX Pipeline Register Outputs:
+  Control Signals:
+    ALU_src_out: x, Mem_to_Reg_out: x, Reg_Write_out: x
+    Mem_Read_out: x, Mem_Write_out: x, Branch_en_out: x
+  Register Values and Forwarding:
+    ValA_idex: xxxxxxxxxxxxxxxx, ValB_idex: xxxxxxxxxxxxxxxx
+    forwardA: xx, forwardB: xx
+    ValA_forwarded: xxxxxxxxxxxxxxxx, ValB_forwarded: xxxxxxxxxxxxxxxx
+  Instruction Fields:
+    opcode_out_idex: xxxxxxx
+    rs1_out_idex:  x, rs2_out_idex:  x, rd_out_idex:  x
+    funct3_out_idex: xxx, funct7_out_idex: xxxxxxx
+    imm_out_idex: xxxxxxxxxxxxxxxx
+  Program Counter:
+    PC_out_idex: xxxxxxxxxxxxxxxx
+    Branch target: xxxxxxxxxxxxxxxx
+
+Execute Stage Outputs:
+  result: xxxxxxxxxxxxxxxx
+  Carry: x, Overflow: x, Zero Flag: x
+  Instruction Fields Passed to EX/MEM:
+    opcode_out_ex: xxxxxxx
+    rs1_out_ex:  x, rs2_out_ex:  x, rd_out_ex:  x
+    funct3_out_ex: xxx, funct7_out_ex: xxxxxxx
+
+EX/MEM Pipeline Register Outputs:
+  Control Signals:
+    Mem_to_Reg_out: x, Reg_Write_out: x, Mem_Read_out: x
+    Mem_Write_out: x, Branch_en_out: x
+  Register Values:
+    ValB_exmem: xxxxxxxxxxxxxxxx
+  Result: xxxxxxxxxxxxxxxx
+  Zero Flag: x
+  Branch Signals:
+    branch_taken: 0
+    branch_target: 0000000000000000
+
+Memory Stage Outputs:
+  Control Signals:
+    Mem_Read: x, Mem_Write: x, Mem_to_Reg: x
+  Memory Address: xxxxxxxxxxxxxxxx
+  Write Data (ValB): xxxxxxxxxxxxxxxx
+  Read Data: xxxxxxxxxxxxxxxx
+  Destination Register (rd):  x
+
+MEM/WB Pipeline Register Outputs:
+  Control Signals:
+    Reg_Write_out: x, Mem_to_Reg_out: x
+  Memory Data: xxxxxxxxxxxxxxxx
+  ALU Result: xxxxxxxxxxxxxxxx
+  Destination Register (rd):  x
+  Write Data (final): xxxxxxxxxxxxxxxx
+----------------------------------------
+
+---------- Clock Cycle ----------
+Reset: 0
+Current PC: 0000000000000004
+Instruction: 40428333
+
+Fetch Stage Outputs:
+  opcode: 0110011, rd:  6, rs1:  5, rs2:  4
+  funct3: 000, funct7: 0100000
+  imm: 0000000000000000
+  Valid Instruction: 1, Memory Error: 0
+
+Pipeline Register IF/ID Outputs:
+  opcode_out: 0110011, rd_out:  4, rs1_out:  1, rs2_out:  2
+  funct3_out: 000, funct7_out: 0000000
+  imm_out: 0000000000000000
+  PC_out: 0000000000000004
+
+Instruction Decoder Outputs:
+  Control Signals:
+    ALU_src: 0, Mem_to_Reg: 0, Reg_Write: 1
+    Mem_Read: 0, Mem_Write: 0, Branch_en: 0
+  Register Values:
+    ValA: 0000000000000001, ValB: 0000000000000002
+  Instruction Fields Passed to ID/EX:
+    opcode_out_cd: 0110011
+    rs1_out_cd:  1, rs2_out_cd:  2, rd_out_cd:  4
+    funct3_out_cd: 000, funct7_out_cd: 0000000
+    imm_out_cd: 0000000000000000
+
+ID/EX Pipeline Register Outputs:
+  Control Signals:
+    ALU_src_out: 0, Mem_to_Reg_out: 0, Reg_Write_out: 0
+    Mem_Read_out: 0, Mem_Write_out: 0, Branch_en_out: 0
+  Register Values and Forwarding:
+    ValA_idex: xxxxxxxxxxxxxxxx, ValB_idex: xxxxxxxxxxxxxxxx
+    forwardA: xx, forwardB: xx
+    ValA_forwarded: xxxxxxxxxxxxxxxx, ValB_forwarded: xxxxxxxxxxxxxxxx
+  Instruction Fields:
+    opcode_out_idex: xxxxxxx
+    rs1_out_idex:  x, rs2_out_idex:  x, rd_out_idex:  x
+    funct3_out_idex: xxx, funct7_out_idex: xxxxxxx
+    imm_out_idex: xxxxxxxxxxxxxxxx
+  Program Counter:
+    PC_out_idex: 0000000000000000
+    Branch target: xxxxxxxxxxxxxxxx
+
+Execute Stage Outputs:
+  result: xxxxxxxxxxxxxxxx
+  Carry: x, Overflow: x, Zero Flag: x
+  Instruction Fields Passed to EX/MEM:
+    opcode_out_ex: xxxxxxx
+    rs1_out_ex:  x, rs2_out_ex:  x, rd_out_ex:  x
+    funct3_out_ex: xxx, funct7_out_ex: xxxxxxx
+
+EX/MEM Pipeline Register Outputs:
+  Control Signals:
+    Mem_to_Reg_out: x, Reg_Write_out: x, Mem_Read_out: x
+    Mem_Write_out: x, Branch_en_out: x
+  Register Values:
+    ValB_exmem: xxxxxxxxxxxxxxxx
+  Result: xxxxxxxxxxxxxxxx
+  Zero Flag: x
+  Branch Signals:
+    branch_taken: 0
+    branch_target: 0000000000000000
+
+Memory Stage Outputs:
+  Control Signals:
+    Mem_Read: x, Mem_Write: x, Mem_to_Reg: x
+  Memory Address: xxxxxxxxxxxxxxxx
+  Write Data (ValB): xxxxxxxxxxxxxxxx
+  Read Data: xxxxxxxxxxxxxxxx
+  Destination Register (rd):  x
+
+MEM/WB Pipeline Register Outputs:
+  Control Signals:
+    Reg_Write_out: x, Mem_to_Reg_out: x
+  Memory Data: xxxxxxxxxxxxxxxx
+  ALU Result: xxxxxxxxxxxxxxxx
+  Destination Register (rd):  x
+  Write Data (final): xxxxxxxxxxxxxxxx
+----------------------------------------
+
+---------- Clock Cycle ----------
+Reset: 0
+Current PC: 0000000000000008
+Instruction: 004303b3
+
+Fetch Stage Outputs:
+  opcode: 0110011, rd:  7, rs1:  6, rs2:  4
+  funct3: 000, funct7: 0000000
+  imm: 0000000000000000
+  Valid Instruction: 1, Memory Error: 0
+
+Pipeline Register IF/ID Outputs:
+  opcode_out: 0110011, rd_out:  6, rs1_out:  5, rs2_out:  4
+  funct3_out: 000, funct7_out: 0100000
+  imm_out: 0000000000000000
+  PC_out: 0000000000000008
+
+Instruction Decoder Outputs:
+  Control Signals:
+    ALU_src: 0, Mem_to_Reg: 0, Reg_Write: 1
+    Mem_Read: 0, Mem_Write: 0, Branch_en: 0
+  Register Values:
+    ValA: 0000000000000005, ValB: 0000000000000004
+  Instruction Fields Passed to ID/EX:
+    opcode_out_cd: 0110011
+    rs1_out_cd:  5, rs2_out_cd:  4, rd_out_cd:  6
+    funct3_out_cd: 000, funct7_out_cd: 0100000
+    imm_out_cd: 0000000000000000
+
+ID/EX Pipeline Register Outputs:
+  Control Signals:
+    ALU_src_out: 0, Mem_to_Reg_out: 0, Reg_Write_out: 1
+    Mem_Read_out: 0, Mem_Write_out: 0, Branch_en_out: 0
+  Register Values and Forwarding:
+    ValA_idex: 0000000000000001, ValB_idex: 0000000000000002
+    forwardA: 00, forwardB: 00
+    ValA_forwarded: 0000000000000001, ValB_forwarded: 0000000000000002
+  Instruction Fields:
+    opcode_out_idex: 0110011
+    rs1_out_idex:  1, rs2_out_idex:  2, rd_out_idex:  4
+    funct3_out_idex: 000, funct7_out_idex: 0000000
+    imm_out_idex: 0000000000000000
+  Program Counter:
+    PC_out_idex: 0000000000000004
+    Branch target: 0000000000000004
+
+Execute Stage Outputs:
+  result: 0000000000000003
+  Carry: 0, Overflow: 0, Zero Flag: x
+  Instruction Fields Passed to EX/MEM:
+    opcode_out_ex: 0110011
+    rs1_out_ex:  1, rs2_out_ex:  2, rd_out_ex:  4
+    funct3_out_ex: 000, funct7_out_ex: 0000000
+
+EX/MEM Pipeline Register Outputs:
+  Control Signals:
+    Mem_to_Reg_out: 0, Reg_Write_out: 0, Mem_Read_out: 0
+    Mem_Write_out: 0, Branch_en_out: 0
+  Register Values:
+    ValB_exmem: xxxxxxxxxxxxxxxx
+  Result: xxxxxxxxxxxxxxxx
+  Zero Flag: x
+  Branch Signals:
+    branch_taken: 0
+    branch_target: xxxxxxxxxxxxxxxx
+
+Memory Stage Outputs:
+  Control Signals:
+    Mem_Read: 0, Mem_Write: 0, Mem_to_Reg: 0
+  Memory Address: xxxxxxxxxxxxxxxx
+  Write Data (ValB): xxxxxxxxxxxxxxxx
+  Read Data: 0000000000000000
+  Destination Register (rd):  x
+
+MEM/WB Pipeline Register Outputs:
+  Control Signals:
+    Reg_Write_out: x, Mem_to_Reg_out: x
+  Memory Data: xxxxxxxxxxxxxxxx
+  ALU Result: xxxxxxxxxxxxxxxx
+  Destination Register (rd):  x
+  Write Data (final): xxxxxxxxxxxxxxxx
+----------------------------------------
+
+---------- Clock Cycle ----------
+Reset: 0
+Current PC: 000000000000000c
+Instruction: 00938413
+
+Fetch Stage Outputs:
+  opcode: 0010011, rd:  8, rs1:  7, rs2:  0
+  funct3: 000, funct7: 0000000
+  imm: 0000000000000009
+  Valid Instruction: 1, Memory Error: 0
+
+Pipeline Register IF/ID Outputs:
+  opcode_out: 0110011, rd_out:  7, rs1_out:  6, rs2_out:  4
+  funct3_out: 000, funct7_out: 0000000
+  imm_out: 0000000000000000
+  PC_out: 000000000000000c
+
+Instruction Decoder Outputs:
+  Control Signals:
+    ALU_src: 0, Mem_to_Reg: 0, Reg_Write: 1
+    Mem_Read: 0, Mem_Write: 0, Branch_en: 0
+  Register Values:
+    ValA: 0000000000000006, ValB: 0000000000000004
+  Instruction Fields Passed to ID/EX:
+    opcode_out_cd: 0110011
+    rs1_out_cd:  6, rs2_out_cd:  4, rd_out_cd:  7
+    funct3_out_cd: 000, funct7_out_cd: 0000000
+    imm_out_cd: 0000000000000000
+
+ID/EX Pipeline Register Outputs:
+  Control Signals:
+    ALU_src_out: 0, Mem_to_Reg_out: 0, Reg_Write_out: 1
+    Mem_Read_out: 0, Mem_Write_out: 0, Branch_en_out: 0
+  Register Values and Forwarding:
+    ValA_idex: 0000000000000005, ValB_idex: 0000000000000004
+    forwardA: 00, forwardB: 10
+    ValA_forwarded: 0000000000000005, ValB_forwarded: 0000000000000003
+  Instruction Fields:
+    opcode_out_idex: 0110011
+    rs1_out_idex:  5, rs2_out_idex:  4, rd_out_idex:  6
+    funct3_out_idex: 000, funct7_out_idex: 0100000
+    imm_out_idex: 0000000000000000
+  Program Counter:
+    PC_out_idex: 0000000000000008
+    Branch target: 0000000000000008
+
+Execute Stage Outputs:
+  result: 0000000000000002
+  Carry: 0, Overflow: 0, Zero Flag: x
+  Instruction Fields Passed to EX/MEM:
+    opcode_out_ex: 0110011
+    rs1_out_ex:  5, rs2_out_ex:  4, rd_out_ex:  6
+    funct3_out_ex: 000, funct7_out_ex: 0100000
+
+EX/MEM Pipeline Register Outputs:
+  Control Signals:
+    Mem_to_Reg_out: 0, Reg_Write_out: 1, Mem_Read_out: 0
+    Mem_Write_out: 0, Branch_en_out: 0
+  Register Values:
+    ValB_exmem: 0000000000000002
+  Result: 0000000000000003
+  Zero Flag: x
+  Branch Signals:
+    branch_taken: 0
+    branch_target: 0000000000000004
+
+Memory Stage Outputs:
+  Control Signals:
+    Mem_Read: 0, Mem_Write: 0, Mem_to_Reg: 0
+  Memory Address: 0000000000000003
+  Write Data (ValB): 0000000000000002
+  Read Data: 0000000000000000
+  Destination Register (rd):  4
+
+MEM/WB Pipeline Register Outputs:
+  Control Signals:
+    Reg_Write_out: 0, Mem_to_Reg_out: 0
+  Memory Data: 0000000000000000
+  ALU Result: xxxxxxxxxxxxxxxx
+  Destination Register (rd):  x
+  Write Data (final): xxxxxxxxxxxxxxxx
+----------------------------------------
+
+---------- Clock Cycle ----------
+Reset: 0
+Current PC: 0000000000000010
+Instruction: 00b6b423
+
+Fetch Stage Outputs:
+  opcode: 0100011, rd:  0, rs1: 13, rs2: 11
+  funct3: 011, funct7: 0000000
+  imm: 0000000000000008
+  Valid Instruction: 1, Memory Error: 0
+
+Pipeline Register IF/ID Outputs:
+  opcode_out: 0010011, rd_out:  8, rs1_out:  7, rs2_out:  0
+  funct3_out: 000, funct7_out: 0000000
+  imm_out: 0000000000000009
+  PC_out: 0000000000000010
+
+Instruction Decoder Outputs:
+  Control Signals:
+    ALU_src: 0, Mem_to_Reg: 0, Reg_Write: 1
+    Mem_Read: 0, Mem_Write: 0, Branch_en: 0
+  Register Values:
+    ValA: 0000000000000007, ValB: 0000000000000009
+  Instruction Fields Passed to ID/EX:
+    opcode_out_cd: 0010011
+    rs1_out_cd:  7, rs2_out_cd:  0, rd_out_cd:  8
+    funct3_out_cd: 000, funct7_out_cd: 0000000
+    imm_out_cd: 0000000000000009
+
+ID/EX Pipeline Register Outputs:
+  Control Signals:
+    ALU_src_out: 0, Mem_to_Reg_out: 0, Reg_Write_out: 1
+    Mem_Read_out: 0, Mem_Write_out: 0, Branch_en_out: 0
+  Register Values and Forwarding:
+    ValA_idex: 0000000000000006, ValB_idex: 0000000000000004
+    forwardA: 10, forwardB: 01
+    ValA_forwarded: 0000000000000002, ValB_forwarded: 0000000000000003
+  Instruction Fields:
+    opcode_out_idex: 0110011
+    rs1_out_idex:  6, rs2_out_idex:  4, rd_out_idex:  7
+    funct3_out_idex: 000, funct7_out_idex: 0000000
+    imm_out_idex: 0000000000000000
+  Program Counter:
+    PC_out_idex: 000000000000000c
+    Branch target: 000000000000000c
+
+Execute Stage Outputs:
+  result: 0000000000000005
+  Carry: 0, Overflow: 0, Zero Flag: x
+  Instruction Fields Passed to EX/MEM:
+    opcode_out_ex: 0110011
+    rs1_out_ex:  6, rs2_out_ex:  4, rd_out_ex:  7
+    funct3_out_ex: 000, funct7_out_ex: 0000000
+
+EX/MEM Pipeline Register Outputs:
+  Control Signals:
+    Mem_to_Reg_out: 0, Reg_Write_out: 1, Mem_Read_out: 0
+    Mem_Write_out: 0, Branch_en_out: 0
+  Register Values:
+    ValB_exmem: 0000000000000003
+  Result: 0000000000000002
+  Zero Flag: x
+  Branch Signals:
+    branch_taken: 0
+    branch_target: 0000000000000008
+
+Memory Stage Outputs:
+  Control Signals:
+    Mem_Read: 0, Mem_Write: 0, Mem_to_Reg: 0
+  Memory Address: 0000000000000002
+  Write Data (ValB): 0000000000000003
+  Read Data: 0000000000000000
+  Destination Register (rd):  6
+
+MEM/WB Pipeline Register Outputs:
+  Control Signals:
+    Reg_Write_out: 1, Mem_to_Reg_out: 0
+  Memory Data: 0000000000000000
+  ALU Result: 0000000000000003
+  Destination Register (rd):  4
+  Write Data (final): 0000000000000003
+----------------------------------------
+
+Register Write: r 4 = 0000000000000003
+---------- Clock Cycle ----------
+Reset: 0
+Current PC: 0000000000000014
+Instruction: 0086bc03
+
+Fetch Stage Outputs:
+  opcode: 0000011, rd: 24, rs1: 13, rs2:  0
+  funct3: 011, funct7: 0000000
+  imm: 0000000000000008
+  Valid Instruction: 1, Memory Error: 0
+
+Pipeline Register IF/ID Outputs:
+  opcode_out: 0100011, rd_out:  0, rs1_out: 13, rs2_out: 11
+  funct3_out: 011, funct7_out: 0000000
+  imm_out: 0000000000000008
+  PC_out: 0000000000000014
+
+Instruction Decoder Outputs:
+  Control Signals:
+    ALU_src: 1, Mem_to_Reg: 0, Reg_Write: 0
+    Mem_Read: 0, Mem_Write: 1, Branch_en: 0
+  Register Values:
+    ValA: 000000000000000d, ValB: 000000000000000b
+  Instruction Fields Passed to ID/EX:
+    opcode_out_cd: 0100011
+    rs1_out_cd: 13, rs2_out_cd: 11, rd_out_cd:  0
+    funct3_out_cd: 011, funct7_out_cd: 0000000
+    imm_out_cd: 0000000000000008
+
+ID/EX Pipeline Register Outputs:
+  Control Signals:
+    ALU_src_out: 0, Mem_to_Reg_out: 0, Reg_Write_out: 1
+    Mem_Read_out: 0, Mem_Write_out: 0, Branch_en_out: 0
+  Register Values and Forwarding:
+    ValA_idex: 0000000000000007, ValB_idex: 0000000000000009
+    forwardA: 10, forwardB: 00
+    ValA_forwarded: 0000000000000005, ValB_forwarded: 0000000000000009
+  Instruction Fields:
+    opcode_out_idex: 0010011
+    rs1_out_idex:  7, rs2_out_idex:  0, rd_out_idex:  8
+    funct3_out_idex: 000, funct7_out_idex: 0000000
+    imm_out_idex: 0000000000000009
+  Program Counter:
+    PC_out_idex: 0000000000000010
+    Branch target: 0000000000000022
+
+Execute Stage Outputs:
+  result: 000000000000000e
+  Carry: 0, Overflow: 0, Zero Flag: x
+  Instruction Fields Passed to EX/MEM:
+    opcode_out_ex: 0010011
+    rs1_out_ex:  7, rs2_out_ex:  0, rd_out_ex:  8
+    funct3_out_ex: 000, funct7_out_ex: 0000000
+
+EX/MEM Pipeline Register Outputs:
+  Control Signals:
+    Mem_to_Reg_out: 0, Reg_Write_out: 1, Mem_Read_out: 0
+    Mem_Write_out: 0, Branch_en_out: 0
+  Register Values:
+    ValB_exmem: 0000000000000003
+  Result: 0000000000000005
+  Zero Flag: x
+  Branch Signals:
+    branch_taken: 0
+    branch_target: 000000000000000c
+
+Memory Stage Outputs:
+  Control Signals:
+    Mem_Read: 0, Mem_Write: 0, Mem_to_Reg: 0
+  Memory Address: 0000000000000005
+  Write Data (ValB): 0000000000000003
+  Read Data: 0000000000000000
+  Destination Register (rd):  7
+
+MEM/WB Pipeline Register Outputs:
+  Control Signals:
+    Reg_Write_out: 1, Mem_to_Reg_out: 0
+  Memory Data: 0000000000000000
+  ALU Result: 0000000000000002
+  Destination Register (rd):  6
+  Write Data (final): 0000000000000002
+----------------------------------------
+
+Register Write: r 6 = 0000000000000002
+---------- Clock Cycle ----------
+Reset: 0
+Current PC: 0000000000000018
+Instruction: 018cf8b3
+
+Fetch Stage Outputs:
+  opcode: 0110011, rd: 17, rs1: 25, rs2: 24
+  funct3: 111, funct7: 0000000
+  imm: 0000000000000000
+  Valid Instruction: 1, Memory Error: 0
+
+Pipeline Register IF/ID Outputs:
+  opcode_out: 0000011, rd_out: 24, rs1_out: 13, rs2_out:  0
+  funct3_out: 011, funct7_out: 0000000
+  imm_out: 0000000000000008
+  PC_out: 0000000000000018
+
+Instruction Decoder Outputs:
+  Control Signals:
+    ALU_src: 1, Mem_to_Reg: 1, Reg_Write: 1
+    Mem_Read: 1, Mem_Write: 0, Branch_en: 0
+  Register Values:
+    ValA: 000000000000000d, ValB: 0000000000000008
+  Instruction Fields Passed to ID/EX:
+    opcode_out_cd: 0000011
+    rs1_out_cd: 13, rs2_out_cd:  0, rd_out_cd: 24
+    funct3_out_cd: 011, funct7_out_cd: 0000000
+    imm_out_cd: 0000000000000008
+
+ID/EX Pipeline Register Outputs:
+  Control Signals:
+    ALU_src_out: 1, Mem_to_Reg_out: 0, Reg_Write_out: 0
+    Mem_Read_out: 0, Mem_Write_out: 1, Branch_en_out: 0
+  Register Values and Forwarding:
+    ValA_idex: 000000000000000d, ValB_idex: 000000000000000b
+    forwardA: 00, forwardB: 00
+    ValA_forwarded: 000000000000000d, ValB_forwarded: 000000000000000b
+  Instruction Fields:
+    opcode_out_idex: 0100011
+    rs1_out_idex: 13, rs2_out_idex: 11, rd_out_idex:  0
+    funct3_out_idex: 011, funct7_out_idex: 0000000
+    imm_out_idex: 0000000000000008
+  Program Counter:
+    PC_out_idex: 0000000000000014
+    Branch target: 0000000000000024
+
+Execute Stage Outputs:
+  result: 0000000000000015
+  Carry: x, Overflow: x, Zero Flag: x
+  Instruction Fields Passed to EX/MEM:
+    opcode_out_ex: 0100011
+    rs1_out_ex: 13, rs2_out_ex: 11, rd_out_ex:  0
+    funct3_out_ex: 011, funct7_out_ex: 0000000
+
+EX/MEM Pipeline Register Outputs:
+  Control Signals:
+    Mem_to_Reg_out: 0, Reg_Write_out: 1, Mem_Read_out: 0
+    Mem_Write_out: 0, Branch_en_out: 0
+  Register Values:
+    ValB_exmem: 0000000000000009
+  Result: 000000000000000e
+  Zero Flag: x
+  Branch Signals:
+    branch_taken: 0
+    branch_target: 0000000000000022
+
+Memory Stage Outputs:
+  Control Signals:
+    Mem_Read: 0, Mem_Write: 0, Mem_to_Reg: 0
+  Memory Address: 000000000000000e
+  Write Data (ValB): 0000000000000009
+  Read Data: 0000000000000000
+  Destination Register (rd):  8
+
+MEM/WB Pipeline Register Outputs:
+  Control Signals:
+    Reg_Write_out: 1, Mem_to_Reg_out: 0
+  Memory Data: 0000000000000000
+  ALU Result: 0000000000000005
+  Destination Register (rd):  7
+  Write Data (final): 0000000000000005
+----------------------------------------
+
+Register Write: r 7 = 0000000000000005
+---------- Clock Cycle ----------
+Reset: 0
+Current PC: 000000000000001c
+Instruction: 01ade9b3
+
+Fetch Stage Outputs:
+  opcode: 0110011, rd: 19, rs1: 27, rs2: 26
+  funct3: 110, funct7: 0000000
+  imm: 0000000000000000
+  Valid Instruction: 1, Memory Error: 0
+
+Pipeline Register IF/ID Outputs:
+  opcode_out: 0110011, rd_out: 17, rs1_out: 25, rs2_out: 24
+  funct3_out: 111, funct7_out: 0000000
+  imm_out: 0000000000000000
+  PC_out: 000000000000001c
+
+Instruction Decoder Outputs:
+  Control Signals:
+    ALU_src: 0, Mem_to_Reg: 0, Reg_Write: 1
+    Mem_Read: 0, Mem_Write: 0, Branch_en: 0
+  Register Values:
+    ValA: 0000000000000019, ValB: 0000000000000018
+  Instruction Fields Passed to ID/EX:
+    opcode_out_cd: 0110011
+    rs1_out_cd: 25, rs2_out_cd: 24, rd_out_cd: 17
+    funct3_out_cd: 111, funct7_out_cd: 0000000
+    imm_out_cd: 0000000000000000
+
+ID/EX Pipeline Register Outputs:
+  Control Signals:
+    ALU_src_out: 1, Mem_to_Reg_out: 1, Reg_Write_out: 1
+    Mem_Read_out: 1, Mem_Write_out: 0, Branch_en_out: 0
+  Register Values and Forwarding:
+    ValA_idex: 000000000000000d, ValB_idex: 0000000000000008
+    forwardA: 00, forwardB: 00
+    ValA_forwarded: 000000000000000d, ValB_forwarded: 0000000000000008
+  Instruction Fields:
+    opcode_out_idex: 0000011
+    rs1_out_idex: 13, rs2_out_idex:  0, rd_out_idex: 24
+    funct3_out_idex: 011, funct7_out_idex: 0000000
+    imm_out_idex: 0000000000000008
+  Program Counter:
+    PC_out_idex: 0000000000000018
+    Branch target: 0000000000000028
+
+Execute Stage Outputs:
+  result: 0000000000000015
+  Carry: x, Overflow: x, Zero Flag: x
+  Instruction Fields Passed to EX/MEM:
+    opcode_out_ex: 0000011
+    rs1_out_ex: 13, rs2_out_ex:  0, rd_out_ex: 24
+    funct3_out_ex: 011, funct7_out_ex: 0000000
+
+EX/MEM Pipeline Register Outputs:
+  Control Signals:
+    Mem_to_Reg_out: 0, Reg_Write_out: 0, Mem_Read_out: 0
+    Mem_Write_out: 1, Branch_en_out: 0
+  Register Values:
+    ValB_exmem: 000000000000000b
+  Result: 0000000000000015
+  Zero Flag: x
+  Branch Signals:
+    branch_taken: 0
+    branch_target: 0000000000000024
+
+Memory Stage Outputs:
+  Control Signals:
+    Mem_Read: 0, Mem_Write: 1, Mem_to_Reg: 0
+  Memory Address: 0000000000000015
+  Write Data (ValB): 000000000000000b
+  Read Data: 0000000000000000
+  Destination Register (rd):  0
+
+MEM/WB Pipeline Register Outputs:
+  Control Signals:
+    Reg_Write_out: 1, Mem_to_Reg_out: 0
+  Memory Data: 0000000000000000
+  ALU Result: 000000000000000e
+  Destination Register (rd):  8
+  Write Data (final): 000000000000000e
+----------------------------------------
+
+Memory Write: Addr=0000000000000015, Data=000000000000000b
+Register Write: r 8 = 000000000000000e
+---------- Clock Cycle ----------
+Reset: 0
+Current PC: 0000000000000020
+Instruction: 00e68363
+
+Fetch Stage Outputs:
+  opcode: 1100011, rd:  0, rs1: 13, rs2: 14
+  funct3: 000, funct7: 0000000
+  imm: 0000000000000006
+  Valid Instruction: 1, Memory Error: 0
+
+Pipeline Register IF/ID Outputs:
+  opcode_out: 0110011, rd_out: 19, rs1_out: 27, rs2_out: 26
+  funct3_out: 110, funct7_out: 0000000
+  imm_out: 0000000000000000
+  PC_out: 0000000000000020
+
+Instruction Decoder Outputs:
+  Control Signals:
+    ALU_src: 0, Mem_to_Reg: 0, Reg_Write: 1
+    Mem_Read: 0, Mem_Write: 0, Branch_en: 0
+  Register Values:
+    ValA: 000000000000001b, ValB: 000000000000001a
+  Instruction Fields Passed to ID/EX:
+    opcode_out_cd: 0110011
+    rs1_out_cd: 27, rs2_out_cd: 26, rd_out_cd: 19
+    funct3_out_cd: 110, funct7_out_cd: 0000000
+    imm_out_cd: 0000000000000000
+
+ID/EX Pipeline Register Outputs:
+  Control Signals:
+    ALU_src_out: 0, Mem_to_Reg_out: 0, Reg_Write_out: 1
+    Mem_Read_out: 0, Mem_Write_out: 0, Branch_en_out: 0
+  Register Values and Forwarding:
+    ValA_idex: 0000000000000019, ValB_idex: 0000000000000018
+    forwardA: 00, forwardB: 10
+    ValA_forwarded: 0000000000000019, ValB_forwarded: 0000000000000015
+  Instruction Fields:
+    opcode_out_idex: 0110011
+    rs1_out_idex: 25, rs2_out_idex: 24, rd_out_idex: 17
+    funct3_out_idex: 111, funct7_out_idex: 0000000
+    imm_out_idex: 0000000000000000
+  Program Counter:
+    PC_out_idex: 000000000000001c
+    Branch target: 000000000000001c
+
+Execute Stage Outputs:
+  result: 0000000000000011
+  Carry: x, Overflow: x, Zero Flag: x
+  Instruction Fields Passed to EX/MEM:
+    opcode_out_ex: 0110011
+    rs1_out_ex: 25, rs2_out_ex: 24, rd_out_ex: 17
+    funct3_out_ex: 111, funct7_out_ex: 0000000
+
+EX/MEM Pipeline Register Outputs:
+  Control Signals:
+    Mem_to_Reg_out: 1, Reg_Write_out: 1, Mem_Read_out: 1
+    Mem_Write_out: 0, Branch_en_out: 0
+  Register Values:
+    ValB_exmem: 0000000000000008
+  Result: 0000000000000015
+  Zero Flag: x
+  Branch Signals:
+    branch_taken: 0
+    branch_target: 0000000000000028
+
+Memory Stage Outputs:
+  Control Signals:
+    Mem_Read: 1, Mem_Write: 0, Mem_to_Reg: 1
+  Memory Address: 0000000000000015
+  Write Data (ValB): 0000000000000008
+  Read Data: 000000000000000b
+  Destination Register (rd): 24
+
+MEM/WB Pipeline Register Outputs:
+  Control Signals:
+    Reg_Write_out: 0, Mem_to_Reg_out: 0
+  Memory Data: 0000000000000000
+  ALU Result: 0000000000000015
+  Destination Register (rd):  0
+  Write Data (final): xxxxxxxxxxxxxxxx
+----------------------------------------
+
+---------- Clock Cycle ----------
+Reset: 0
+Current PC: 0000000000000024
+Instruction: 00f78263
+
+Fetch Stage Outputs:
+  opcode: 1100011, rd:  0, rs1: 15, rs2: 15
+  funct3: 000, funct7: 0000000
+  imm: 0000000000000004
+  Valid Instruction: 1, Memory Error: 0
+
+Pipeline Register IF/ID Outputs:
+  opcode_out: 1100011, rd_out:  0, rs1_out: 13, rs2_out: 14
+  funct3_out: 000, funct7_out: 0000000
+  imm_out: 0000000000000006
+  PC_out: 0000000000000024
+
+Instruction Decoder Outputs:
+  Control Signals:
+    ALU_src: 0, Mem_to_Reg: 0, Reg_Write: 0
+    Mem_Read: 0, Mem_Write: 0, Branch_en: 1
+  Register Values:
+    ValA: 000000000000000d, ValB: 000000000000000e
+  Instruction Fields Passed to ID/EX:
+    opcode_out_cd: 1100011
+    rs1_out_cd: 13, rs2_out_cd: 14, rd_out_cd:  0
+    funct3_out_cd: 000, funct7_out_cd: 0000000
+    imm_out_cd: 0000000000000006
+
+ID/EX Pipeline Register Outputs:
+  Control Signals:
+    ALU_src_out: 0, Mem_to_Reg_out: 0, Reg_Write_out: 1
+    Mem_Read_out: 0, Mem_Write_out: 0, Branch_en_out: 0
+  Register Values and Forwarding:
+    ValA_idex: 000000000000001b, ValB_idex: 000000000000001a
+    forwardA: 00, forwardB: 00
+    ValA_forwarded: 000000000000001b, ValB_forwarded: 000000000000001a
+  Instruction Fields:
+    opcode_out_idex: 0110011
+    rs1_out_idex: 27, rs2_out_idex: 26, rd_out_idex: 19
+    funct3_out_idex: 110, funct7_out_idex: 0000000
+    imm_out_idex: 0000000000000000
+  Program Counter:
+    PC_out_idex: 0000000000000020
+    Branch target: 0000000000000020
+
+Execute Stage Outputs:
+  result: 000000000000001b
+  Carry: x, Overflow: x, Zero Flag: x
+  Instruction Fields Passed to EX/MEM:
+    opcode_out_ex: 0110011
+    rs1_out_ex: 27, rs2_out_ex: 26, rd_out_ex: 19
+    funct3_out_ex: 110, funct7_out_ex: 0000000
+
+EX/MEM Pipeline Register Outputs:
+  Control Signals:
+    Mem_to_Reg_out: 0, Reg_Write_out: 1, Mem_Read_out: 0
+    Mem_Write_out: 0, Branch_en_out: 0
+  Register Values:
+    ValB_exmem: 0000000000000015
+  Result: 0000000000000011
+  Zero Flag: x
+  Branch Signals:
+    branch_taken: 0
+    branch_target: 000000000000001c
+
+Memory Stage Outputs:
+  Control Signals:
+    Mem_Read: 0, Mem_Write: 0, Mem_to_Reg: 0
+  Memory Address: 0000000000000011
+  Write Data (ValB): 0000000000000015
+  Read Data: 0000000000000000
+  Destination Register (rd): 17
+
+MEM/WB Pipeline Register Outputs:
+  Control Signals:
+    Reg_Write_out: 1, Mem_to_Reg_out: 1
+  Memory Data: 000000000000000b
+  ALU Result: 0000000000000015
+  Destination Register (rd): 24
+  Write Data (final): 000000000000000b
+----------------------------------------
+
+Register Write: r24 = 000000000000000b
+---------- Clock Cycle ----------
+Reset: 0
+Current PC: 0000000000000028
+Instruction: 00000000
+
+Fetch Stage Outputs:
+  opcode: 0000000, rd:  x, rs1:  0, rs2:  x
+  funct3: xxx, funct7: xxxxxxx
+  imm: xxxxxxxxxxxxxxxx
+  Valid Instruction: 0, Memory Error: 0
+
+Pipeline Register IF/ID Outputs:
+  opcode_out: 1100011, rd_out:  0, rs1_out: 15, rs2_out: 15
+  funct3_out: 000, funct7_out: 0000000
+  imm_out: 0000000000000004
+  PC_out: 0000000000000028
+
+Instruction Decoder Outputs:
+  Control Signals:
+    ALU_src: 0, Mem_to_Reg: 0, Reg_Write: 0
+    Mem_Read: 0, Mem_Write: 0, Branch_en: 1
+  Register Values:
+    ValA: 000000000000000f, ValB: 000000000000000f
+  Instruction Fields Passed to ID/EX:
+    opcode_out_cd: 1100011
+    rs1_out_cd: 15, rs2_out_cd: 15, rd_out_cd:  0
+    funct3_out_cd: 000, funct7_out_cd: 0000000
+    imm_out_cd: 0000000000000004
+
+ID/EX Pipeline Register Outputs:
+  Control Signals:
+    ALU_src_out: 0, Mem_to_Reg_out: 0, Reg_Write_out: 0
+    Mem_Read_out: 0, Mem_Write_out: 0, Branch_en_out: 1
+  Register Values and Forwarding:
+    ValA_idex: 000000000000000d, ValB_idex: 000000000000000e
+    forwardA: 00, forwardB: 00
+    ValA_forwarded: 000000000000000d, ValB_forwarded: 000000000000000e
+  Instruction Fields:
+    opcode_out_idex: 1100011
+    rs1_out_idex: 13, rs2_out_idex: 14, rd_out_idex:  0
+    funct3_out_idex: 000, funct7_out_idex: 0000000
+    imm_out_idex: 0000000000000006
+  Program Counter:
+    PC_out_idex: 0000000000000024
+    Branch target: 0000000000000030
+
+Execute Stage Outputs:
+  result: xxxxxxxxxxxxxxxx
+  Carry: x, Overflow: x, Zero Flag: 0
+  Instruction Fields Passed to EX/MEM:
+    opcode_out_ex: 1100011
+    rs1_out_ex: 13, rs2_out_ex: 14, rd_out_ex:  0
+    funct3_out_ex: 000, funct7_out_ex: 0000000
+
+EX/MEM Pipeline Register Outputs:
+  Control Signals:
+    Mem_to_Reg_out: 0, Reg_Write_out: 1, Mem_Read_out: 0
+    Mem_Write_out: 0, Branch_en_out: 0
+  Register Values:
+    ValB_exmem: 000000000000001a
+  Result: 000000000000001b
+  Zero Flag: x
+  Branch Signals:
+    branch_taken: 0
+    branch_target: 0000000000000020
+
+Memory Stage Outputs:
+  Control Signals:
+    Mem_Read: 0, Mem_Write: 0, Mem_to_Reg: 0
+  Memory Address: 000000000000001b
+  Write Data (ValB): 000000000000001a
+  Read Data: 0000000000000000
+  Destination Register (rd): 19
+
+MEM/WB Pipeline Register Outputs:
+  Control Signals:
+    Reg_Write_out: 1, Mem_to_Reg_out: 0
+  Memory Data: 0000000000000000
+  ALU Result: 0000000000000011
+  Destination Register (rd): 17
+  Write Data (final): 0000000000000011
+----------------------------------------
+
+Register Write: r17 = 0000000000000011
+---------- Clock Cycle ----------
+Reset: 0
+Current PC: 000000000000002c
+Instruction: 00000000
+
+Fetch Stage Outputs:
+  opcode: 0000000, rd:  x, rs1:  0, rs2:  x
+  funct3: xxx, funct7: xxxxxxx
+  imm: xxxxxxxxxxxxxxxx
+  Valid Instruction: 0, Memory Error: 0
+
+Pipeline Register IF/ID Outputs:
+  opcode_out: 0000000, rd_out:  x, rs1_out:  0, rs2_out:  x
+  funct3_out: xxx, funct7_out: xxxxxxx
+  imm_out: xxxxxxxxxxxxxxxx
+  PC_out: 000000000000002c
+
+Instruction Decoder Outputs:
+  Control Signals:
+    ALU_src: 0, Mem_to_Reg: 0, Reg_Write: 0
+    Mem_Read: 0, Mem_Write: 0, Branch_en: 0
+  Register Values:
+    ValA: xxxxxxxxxxxxxxxx, ValB: xxxxxxxxxxxxxxxx
+  Instruction Fields Passed to ID/EX:
+    opcode_out_cd: 0000000
+    rs1_out_cd:  0, rs2_out_cd:  x, rd_out_cd:  x
+    funct3_out_cd: xxx, funct7_out_cd: xxxxxxx
+    imm_out_cd: xxxxxxxxxxxxxxxx
+
+ID/EX Pipeline Register Outputs:
+  Control Signals:
+    ALU_src_out: 0, Mem_to_Reg_out: 0, Reg_Write_out: 0
+    Mem_Read_out: 0, Mem_Write_out: 0, Branch_en_out: 1
+  Register Values and Forwarding:
+    ValA_idex: 000000000000000f, ValB_idex: 000000000000000f
+    forwardA: 00, forwardB: 00
+    ValA_forwarded: 000000000000000f, ValB_forwarded: 000000000000000f
+  Instruction Fields:
+    opcode_out_idex: 1100011
+    rs1_out_idex: 15, rs2_out_idex: 15, rd_out_idex:  0
+    funct3_out_idex: 000, funct7_out_idex: 0000000
+    imm_out_idex: 0000000000000004
+  Program Counter:
+    PC_out_idex: 0000000000000028
+    Branch target: 0000000000000030
+
+Execute Stage Outputs:
+  result: xxxxxxxxxxxxxxxx
+  Carry: x, Overflow: x, Zero Flag: 1
+  Instruction Fields Passed to EX/MEM:
+    opcode_out_ex: 1100011
+    rs1_out_ex: 15, rs2_out_ex: 15, rd_out_ex:  0
+    funct3_out_ex: 000, funct7_out_ex: 0000000
+
+EX/MEM Pipeline Register Outputs:
+  Control Signals:
+    Mem_to_Reg_out: 0, Reg_Write_out: 0, Mem_Read_out: 0
+    Mem_Write_out: 0, Branch_en_out: 1
+  Register Values:
+    ValB_exmem: 000000000000000e
+  Result: xxxxxxxxxxxxxxxx
+  Zero Flag: 0
+  Branch Signals:
+    branch_taken: 0
+    branch_target: 0000000000000030
+
+Memory Stage Outputs:
+  Control Signals:
+    Mem_Read: 0, Mem_Write: 0, Mem_to_Reg: 0
+  Memory Address: xxxxxxxxxxxxxxxx
+  Write Data (ValB): 000000000000000e
+  Read Data: 0000000000000000
+  Destination Register (rd):  0
+
+MEM/WB Pipeline Register Outputs:
+  Control Signals:
+    Reg_Write_out: 1, Mem_to_Reg_out: 0
+  Memory Data: 0000000000000000
+  ALU Result: 000000000000001b
+  Destination Register (rd): 19
+  Write Data (final): 000000000000001b
+----------------------------------------
+
+Register Write: r19 = 000000000000001b
+---------- Clock Cycle ----------
+Reset: 0
+Current PC: 0000000000000030
+Instruction: 00000000
+
+Fetch Stage Outputs:
+  opcode: 0000000, rd:  x, rs1:  0, rs2:  x
+  funct3: xxx, funct7: xxxxxxx
+  imm: xxxxxxxxxxxxxxxx
+  Valid Instruction: 0, Memory Error: 0
+
+Pipeline Register IF/ID Outputs:
+  opcode_out: 0000000, rd_out:  x, rs1_out:  0, rs2_out:  x
+  funct3_out: xxx, funct7_out: xxxxxxx
+  imm_out: xxxxxxxxxxxxxxxx
+  PC_out: 0000000000000030
+
+Instruction Decoder Outputs:
+  Control Signals:
+    ALU_src: 0, Mem_to_Reg: 0, Reg_Write: 0
+    Mem_Read: 0, Mem_Write: 0, Branch_en: 0
+  Register Values:
+    ValA: xxxxxxxxxxxxxxxx, ValB: xxxxxxxxxxxxxxxx
+  Instruction Fields Passed to ID/EX:
+    opcode_out_cd: 0000000
+    rs1_out_cd:  0, rs2_out_cd:  x, rd_out_cd:  x
+    funct3_out_cd: xxx, funct7_out_cd: xxxxxxx
+    imm_out_cd: xxxxxxxxxxxxxxxx
+
+ID/EX Pipeline Register Outputs:
+  Control Signals:
+    ALU_src_out: 0, Mem_to_Reg_out: 0, Reg_Write_out: 0
+    Mem_Read_out: 0, Mem_Write_out: 0, Branch_en_out: 0
+  Register Values and Forwarding:
+    ValA_idex: xxxxxxxxxxxxxxxx, ValB_idex: xxxxxxxxxxxxxxxx
+    forwardA: 00, forwardB: 00
+    ValA_forwarded: xxxxxxxxxxxxxxxx, ValB_forwarded: xxxxxxxxxxxxxxxx
+  Instruction Fields:
+    opcode_out_idex: 0000000
+    rs1_out_idex:  0, rs2_out_idex:  x, rd_out_idex:  x
+    funct3_out_idex: xxx, funct7_out_idex: xxxxxxx
+    imm_out_idex: xxxxxxxxxxxxxxxx
+  Program Counter:
+    PC_out_idex: 000000000000002c
+    Branch target: xxxxxxxxxxxxxxxx
+
+Execute Stage Outputs:
+  result: xxxxxxxxxxxxxxxx
+  Carry: x, Overflow: x, Zero Flag: x
+  Instruction Fields Passed to EX/MEM:
+    opcode_out_ex: 0000000
+    rs1_out_ex:  0, rs2_out_ex:  x, rd_out_ex:  x
+    funct3_out_ex: xxx, funct7_out_ex: xxxxxxx
+
+EX/MEM Pipeline Register Outputs:
+  Control Signals:
+    Mem_to_Reg_out: 0, Reg_Write_out: 0, Mem_Read_out: 0
+    Mem_Write_out: 0, Branch_en_out: 1
+  Register Values:
+    ValB_exmem: 000000000000000f
+  Result: xxxxxxxxxxxxxxxx
+  Zero Flag: 1
+  Branch Signals:
+    branch_taken: 1
+    branch_target: 0000000000000030
+
+Memory Stage Outputs:
+  Control Signals:
+    Mem_Read: 0, Mem_Write: 0, Mem_to_Reg: 0
+  Memory Address: xxxxxxxxxxxxxxxx
+  Write Data (ValB): 000000000000000f
+  Read Data: 0000000000000000
+  Destination Register (rd):  0
+
+MEM/WB Pipeline Register Outputs:
+  Control Signals:
+    Reg_Write_out: 0, Mem_to_Reg_out: 0
+  Memory Data: 0000000000000000
+  ALU Result: xxxxxxxxxxxxxxxx
+  Destination Register (rd):  0
+  Write Data (final): xxxxxxxxxxxxxxxx
+----------------------------------------
+
+---------- Clock Cycle ----------
+Reset: 0
+Current PC: 0000000000000030
+Instruction: 00000000
+
+Fetch Stage Outputs:
+  opcode: 0000000, rd:  x, rs1:  0, rs2:  x
+  funct3: xxx, funct7: xxxxxxx
+  imm: xxxxxxxxxxxxxxxx
+  Valid Instruction: 0, Memory Error: 0
+
+Pipeline Register IF/ID Outputs:
+  opcode_out: 0000000, rd_out:  x, rs1_out:  0, rs2_out:  x
+  funct3_out: xxx, funct7_out: xxxxxxx
+  imm_out: xxxxxxxxxxxxxxxx
+  PC_out: 0000000000000030
+
+Instruction Decoder Outputs:
+  Control Signals:
+    ALU_src: 0, Mem_to_Reg: 0, Reg_Write: 0
+    Mem_Read: 0, Mem_Write: 0, Branch_en: 0
+  Register Values:
+    ValA: xxxxxxxxxxxxxxxx, ValB: xxxxxxxxxxxxxxxx
+  Instruction Fields Passed to ID/EX:
+    opcode_out_cd: 0000000
+    rs1_out_cd:  0, rs2_out_cd:  x, rd_out_cd:  x
+    funct3_out_cd: xxx, funct7_out_cd: xxxxxxx
+    imm_out_cd: xxxxxxxxxxxxxxxx
+
+ID/EX Pipeline Register Outputs:
+  Control Signals:
+    ALU_src_out: 0, Mem_to_Reg_out: 0, Reg_Write_out: 0
+    Mem_Read_out: 0, Mem_Write_out: 0, Branch_en_out: 0
+  Register Values and Forwarding:
+    ValA_idex: xxxxxxxxxxxxxxxx, ValB_idex: xxxxxxxxxxxxxxxx
+    forwardA: 00, forwardB: 00
+    ValA_forwarded: xxxxxxxxxxxxxxxx, ValB_forwarded: xxxxxxxxxxxxxxxx
+  Instruction Fields:
+    opcode_out_idex: 0000000
+    rs1_out_idex:  0, rs2_out_idex:  x, rd_out_idex:  x
+    funct3_out_idex: xxx, funct7_out_idex: xxxxxxx
+    imm_out_idex: xxxxxxxxxxxxxxxx
+  Program Counter:
+    PC_out_idex: 0000000000000030
+    Branch target: xxxxxxxxxxxxxxxx
+
+Execute Stage Outputs:
+  result: xxxxxxxxxxxxxxxx
+  Carry: x, Overflow: x, Zero Flag: x
+  Instruction Fields Passed to EX/MEM:
+    opcode_out_ex: 0000000
+    rs1_out_ex:  0, rs2_out_ex:  x, rd_out_ex:  x
+    funct3_out_ex: xxx, funct7_out_ex: xxxxxxx
+
+EX/MEM Pipeline Register Outputs:
+  Control Signals:
+    Mem_to_Reg_out: 0, Reg_Write_out: 0, Mem_Read_out: 0
+    Mem_Write_out: 0, Branch_en_out: 0
+  Register Values:
+    ValB_exmem: xxxxxxxxxxxxxxxx
+  Result: xxxxxxxxxxxxxxxx
+  Zero Flag: x
+  Branch Signals:
+    branch_taken: 0
+    branch_target: xxxxxxxxxxxxxxxx
+
+Memory Stage Outputs:
+  Control Signals:
+    Mem_Read: 0, Mem_Write: 0, Mem_to_Reg: 0
+  Memory Address: xxxxxxxxxxxxxxxx
+  Write Data (ValB): xxxxxxxxxxxxxxxx
+  Read Data: 0000000000000000
+  Destination Register (rd):  x
+
+MEM/WB Pipeline Register Outputs:
+  Control Signals:
+    Reg_Write_out: 0, Mem_to_Reg_out: 0
+  Memory Data: 0000000000000000
+  ALU Result: xxxxxxxxxxxxxxxx
+  Destination Register (rd):  0
+  Write Data (final): xxxxxxxxxxxxxxxx
+----------------------------------------
+
+---------- Clock Cycle ----------
+Reset: 0
+Current PC: 0000000000000034
+Instruction: 00000000
+
+Fetch Stage Outputs:
+  opcode: 0000000, rd:  x, rs1:  0, rs2:  x
+  funct3: xxx, funct7: xxxxxxx
+  imm: xxxxxxxxxxxxxxxx
+  Valid Instruction: 0, Memory Error: 0
+
+Pipeline Register IF/ID Outputs:
+  opcode_out: 0000000, rd_out:  x, rs1_out:  0, rs2_out:  x
+  funct3_out: xxx, funct7_out: xxxxxxx
+  imm_out: xxxxxxxxxxxxxxxx
+  PC_out: 0000000000000034
+
+Instruction Decoder Outputs:
+  Control Signals:
+    ALU_src: 0, Mem_to_Reg: 0, Reg_Write: 0
+    Mem_Read: 0, Mem_Write: 0, Branch_en: 0
+  Register Values:
+    ValA: xxxxxxxxxxxxxxxx, ValB: xxxxxxxxxxxxxxxx
+  Instruction Fields Passed to ID/EX:
+    opcode_out_cd: 0000000
+    rs1_out_cd:  0, rs2_out_cd:  x, rd_out_cd:  x
+    funct3_out_cd: xxx, funct7_out_cd: xxxxxxx
+    imm_out_cd: xxxxxxxxxxxxxxxx
+
+ID/EX Pipeline Register Outputs:
+  Control Signals:
+    ALU_src_out: 0, Mem_to_Reg_out: 0, Reg_Write_out: 0
+    Mem_Read_out: 0, Mem_Write_out: 0, Branch_en_out: 0
+  Register Values and Forwarding:
+    ValA_idex: xxxxxxxxxxxxxxxx, ValB_idex: xxxxxxxxxxxxxxxx
+    forwardA: 00, forwardB: 00
+    ValA_forwarded: xxxxxxxxxxxxxxxx, ValB_forwarded: xxxxxxxxxxxxxxxx
+  Instruction Fields:
+    opcode_out_idex: 0000000
+    rs1_out_idex:  0, rs2_out_idex:  x, rd_out_idex:  x
+    funct3_out_idex: xxx, funct7_out_idex: xxxxxxx
+    imm_out_idex: xxxxxxxxxxxxxxxx
+  Program Counter:
+    PC_out_idex: 0000000000000030
+    Branch target: xxxxxxxxxxxxxxxx
+
+Execute Stage Outputs:
+  result: xxxxxxxxxxxxxxxx
+  Carry: x, Overflow: x, Zero Flag: x
+  Instruction Fields Passed to EX/MEM:
+    opcode_out_ex: 0000000
+    rs1_out_ex:  0, rs2_out_ex:  x, rd_out_ex:  x
+    funct3_out_ex: xxx, funct7_out_ex: xxxxxxx
+
+EX/MEM Pipeline Register Outputs:
+  Control Signals:
+    Mem_to_Reg_out: 0, Reg_Write_out: 0, Mem_Read_out: 0
+    Mem_Write_out: 0, Branch_en_out: 0
+  Register Values:
+    ValB_exmem: xxxxxxxxxxxxxxxx
+  Result: xxxxxxxxxxxxxxxx
+  Zero Flag: x
+  Branch Signals:
+    branch_taken: 0
+    branch_target: xxxxxxxxxxxxxxxx
+
+Memory Stage Outputs:
+  Control Signals:
+    Mem_Read: 0, Mem_Write: 0, Mem_to_Reg: 0
+  Memory Address: xxxxxxxxxxxxxxxx
+  Write Data (ValB): xxxxxxxxxxxxxxxx
+  Read Data: 0000000000000000
+  Destination Register (rd):  x
+
+MEM/WB Pipeline Register Outputs:
+  Control Signals:
+    Reg_Write_out: 0, Mem_to_Reg_out: 0
+  Memory Data: 0000000000000000
+  ALU Result: xxxxxxxxxxxxxxxx
+  Destination Register (rd):  x
+  Write Data (final): xxxxxxxxxxxxxxxx
+----------------------------------------
+
+---------- Clock Cycle ----------
+Reset: 0
+Current PC: 0000000000000038
+Instruction: 00000000
+
+Fetch Stage Outputs:
+  opcode: 0000000, rd:  x, rs1:  0, rs2:  x
+  funct3: xxx, funct7: xxxxxxx
+  imm: xxxxxxxxxxxxxxxx
+  Valid Instruction: 0, Memory Error: 0
+
+Pipeline Register IF/ID Outputs:
+  opcode_out: 0000000, rd_out:  x, rs1_out:  0, rs2_out:  x
+  funct3_out: xxx, funct7_out: xxxxxxx
+  imm_out: xxxxxxxxxxxxxxxx
+  PC_out: 0000000000000038
+
+Instruction Decoder Outputs:
+  Control Signals:
+    ALU_src: 0, Mem_to_Reg: 0, Reg_Write: 0
+    Mem_Read: 0, Mem_Write: 0, Branch_en: 0
+  Register Values:
+    ValA: xxxxxxxxxxxxxxxx, ValB: xxxxxxxxxxxxxxxx
+  Instruction Fields Passed to ID/EX:
+    opcode_out_cd: 0000000
+    rs1_out_cd:  0, rs2_out_cd:  x, rd_out_cd:  x
+    funct3_out_cd: xxx, funct7_out_cd: xxxxxxx
+    imm_out_cd: xxxxxxxxxxxxxxxx
+
+ID/EX Pipeline Register Outputs:
+  Control Signals:
+    ALU_src_out: 0, Mem_to_Reg_out: 0, Reg_Write_out: 0
+    Mem_Read_out: 0, Mem_Write_out: 0, Branch_en_out: 0
+  Register Values and Forwarding:
+    ValA_idex: xxxxxxxxxxxxxxxx, ValB_idex: xxxxxxxxxxxxxxxx
+    forwardA: 00, forwardB: 00
+    ValA_forwarded: xxxxxxxxxxxxxxxx, ValB_forwarded: xxxxxxxxxxxxxxxx
+  Instruction Fields:
+    opcode_out_idex: 0000000
+    rs1_out_idex:  0, rs2_out_idex:  x, rd_out_idex:  x
+    funct3_out_idex: xxx, funct7_out_idex: xxxxxxx
+    imm_out_idex: xxxxxxxxxxxxxxxx
+  Program Counter:
+    PC_out_idex: 0000000000000034
+    Branch target: xxxxxxxxxxxxxxxx
+
+Execute Stage Outputs:
+  result: xxxxxxxxxxxxxxxx
+  Carry: x, Overflow: x, Zero Flag: x
+  Instruction Fields Passed to EX/MEM:
+    opcode_out_ex: 0000000
+    rs1_out_ex:  0, rs2_out_ex:  x, rd_out_ex:  x
+    funct3_out_ex: xxx, funct7_out_ex: xxxxxxx
+
+EX/MEM Pipeline Register Outputs:
+  Control Signals:
+    Mem_to_Reg_out: 0, Reg_Write_out: 0, Mem_Read_out: 0
+    Mem_Write_out: 0, Branch_en_out: 0
+  Register Values:
+    ValB_exmem: xxxxxxxxxxxxxxxx
+  Result: xxxxxxxxxxxxxxxx
+  Zero Flag: x
+  Branch Signals:
+    branch_taken: 0
+    branch_target: xxxxxxxxxxxxxxxx
+
+Memory Stage Outputs:
+  Control Signals:
+    Mem_Read: 0, Mem_Write: 0, Mem_to_Reg: 0
+  Memory Address: xxxxxxxxxxxxxxxx
+  Write Data (ValB): xxxxxxxxxxxxxxxx
+  Read Data: 0000000000000000
+  Destination Register (rd):  x
+
+MEM/WB Pipeline Register Outputs:
+  Control Signals:
+    Reg_Write_out: 0, Mem_to_Reg_out: 0
+  Memory Data: 0000000000000000
+  ALU Result: xxxxxxxxxxxxxxxx
+  Destination Register (rd):  x
+  Write Data (final): xxxxxxxxxxxxxxxx
+----------------------------------------
+
+
+========== Simulation completed ==========
+---------- Clock Cycle ----------
